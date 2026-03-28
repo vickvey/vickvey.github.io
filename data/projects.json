@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Investment Portfolio Optimization and Risk Analysis",
+    "duration": "Aug 2025 to Present",
+    "description": "Mean-variance optimization framework with efficient frontier analysis and experimentation under varying constraints.",
+    "keywords": ["Portfolio Optimization", "Quantitative Finance", "Financial Modeling", "Python"],
+    "image": "assets/images/projects/portfolio.png",
+    "guide": null,
+    "report": "assets/pdfs/portfolio.pdf",
+    "github": "https://github.com/vickvey/investment-portfolio-analysis"
+  },
+  {
+    "title": "Network Analysis of NSE NIFTY-200 Stocks",
+    "duration": "Aug 2025 to Nov 2025",
+    "description": "Constructed correlation-based financial network and analyzed structure using centrality, clustering, and community detection.",
+    "keywords": ["Network Science", "Correlation Analysis", "NetworkX", "Data Analysis"],
+    "image": "assets/images/projects/network-nifty200.png",
+    "guide": null,
+    "report": "assets/pdfs/network-nifty200.pdf",
+    "github": "https://github.com/vickvey/net-sci-asn"
+  },
+  {
+    "title": "Author Collaboration Network & Link Prediction",
+    "duration": "Aug 2025 to Nov 2025",
+    "description": "Large-scale link prediction on OGBL-Collab using Node2Vec, GNNs, and supervised learning pipelines.",
+    "keywords": ["Graph Mining", "GNNs", "Node2Vec", "PyTorch"],
+    "image": "assets/images/projects/author-collab.png",
+    "guide": "Dr. Akash Anil",
+    "report": "assets/pdfs/author-collab.pdf",
+    "github": "https://github.com/vickvey/author-collab"
+  },
+  {
+    "title": "Modern TABASCO: Textual Ambiguity Detection",
+    "duration": "May 2025 to Aug 2025",
+    "description": "NLP pipeline improving PDF extraction accuracy by 50% and reducing processing time by 60%.",
+    "keywords": ["NLP", "BERT", "FastAPI", "Next.js"],
+    "image": "assets/images/projects/modern-tabasco.png",
+    "guide": "Dr. Arpit Sharma",
+    "report": "https://github.com/vickvey/modern-tabasco/blob/main/README.md",
+    "github": "https://github.com/vickvey/modern-tabasco"
+  },
+  {
+    "title": "Anxiety Prediction using PPG Signals",
+    "duration": "Apr 2024 to Aug 2024",
+    "description": "End-to-end ML pipeline using physiological signals with HRV feature extraction and classification.",
+    "keywords": ["Biomedical ML", "HRV", "Signal Processing"],
+    "image": "assets/images/projects/ppg-example.png",
+    "guide": "Dr. Haroon Lone",
+    "report": "https://github.com/vickvey/Project-PPG/blob/master/README.md",
+    "github": "https://github.com/vickvey/Project-PPG"
+  }
+]

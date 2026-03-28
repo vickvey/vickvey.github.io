@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vivek Kumar | Research Portfolio</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles/custom.css">
+</head>
+
+<!-- PDF Overlay -->
+<div id="pdf-overlay" class="fixed inset-0 bg-black/70 hidden z-[100] flex items-center justify-center">
+
+  <div class="relative w-[95%] h-[90%] bg-white rounded-xl shadow-lg overflow-hidden">
+
+    <!-- Close Button -->
+    <button id="close-pdf"
+      class="absolute top-3 right-3 z-10 px-3 py-1 bg-gray-800 text-white rounded hover:bg-gray-700">
+      ✕
+    </button>
+
+    <!-- PDF Viewer -->
+    <iframe id="pdf-frame"
+      class="w-full h-full"
+      src="">
+    </iframe>
+
+  </div>
+</div>
+
+<body>
+  <div id="header"></div>
+  <main class="flex flex-col gap-20 py-10">
+    <div id="hero"></div>
+    <div id="about"></div>
+    <div id="projects"></div>
+    <!-- <div id="experience"></div> -->
+    <div id="achievements"></div>
+    <div id="skills"></div>
+    <div id="education"></div>
+  </main>
+  
+  <footer class="bg-gray-800 text-white text-center py-4">
+    <p>&copy; 2026 Vivek Kumar. All rights reserved.</p>
+  </footer>
+
+  <script src="js/loadComponents.js"></script>
+  <script>
+  const overlay = document.getElementById("pdf-overlay");
+  const frame = document.getElementById("pdf-frame");
+  const closeBtn = document.getElementById("close-pdf");
+
+  // Open PDF
+  const openPDF = (url) => {
+    frame.src = url;
+    overlay.classList.remove("hidden");
+    document.body.classList.add("overflow-hidden"); // prevent background scroll
+  };
+
+  // Close PDF
+  closeBtn.addEventListener("click", () => {
+    overlay.classList.add("hidden");
+    frame.src = "";
+    document.body.classList.remove("overflow-hidden");
+  });
+
+  // Optional: click outside to close
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      overlay.classList.add("hidden");
+      frame.src = "";
+      document.body.classList.remove("overflow-hidden");
+    }
+  });
+</script>
+</body>
+
+</html>
