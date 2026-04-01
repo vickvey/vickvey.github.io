@@ -1,35 +1,56 @@
-<section id="hero" class="min-h-screen flex items-center">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 px-6 items-center">
+<section id="hero" class="min-h-screen flex items-center bg-gradient-to-b from-white to-gray-50">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 px-6 items-center">
 
     <!-- Left -->
     <div>
-      <h1 class="text-4xl font-medium tracking-wide font-serif mb-4">
-        Hi. I'm Vivek Kumar
+      <p class="text-sm text-blue-600 font-medium tracking-wide mb-3">
+        Researcher • Data Science • Machine Learning • Optimization
+      </p>
+
+      <h1 class="text-5xl font-serif font-medium leading-tight mb-6">
+        Vivek Kumar
       </h1>
 
-      <p class="text-lg text-gray-600 mb-2">
-        Quantitative Researcher in optimization and data-driven systems.
+      <p class="text-xl text-gray-700 mb-4 leading-relaxed">
+        Building data-driven models and intelligent systems for complex real-world problems.
       </p>
 
-      <p class="text-gray-600 mb-6 leading-relaxed">
-        Final-year B.S. Computer Science student at IISER Bhopal, focused on building
-        mathematical models and computational pipelines for complex decision problems.
+      <p class="text-gray-600 mb-6 leading-relaxed max-w-lg">
+        Final-year Computer Science student at IISER Bhopal with strong training in
+        data science, applied machine learning, and optimization. I work on designing
+        computational pipelines and mathematical models to analyze large-scale systems,
+        with applications in networks, sensing, and decision-making under uncertainty.
       </p>
 
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-2 mb-8">
+        <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Data Science</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Applied ML</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Optimization</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Time Series</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Decision Systems</span>
+      </div>
+
+      <!-- CTA -->
       <div class="flex space-x-4">
-        <a href="#projects" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        <a href="#projects"
+          class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 shadow-sm transition">
           View Research
         </a>
+
         <button onclick="openPDF('assets/pdfs/cv.pdf')"
-          class="px-6 py-3 border border-gray-400 rounded-lg hover:bg-gray-100">
-          View CV
+          class="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-100 transition">
+          Download CV
         </button>
       </div>
     </div>
 
     <!-- Right -->
-    <div class="flex justify-center">
-      <img src="assets/images/profile.jpg" alt="Vivek Kumar" class="w-64 h-64 object-cover rounded-full shadow">
+    <div class="flex justify-center relative">
+      <div class="absolute w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-30"></div>
+      <img src="assets/images/profile.jpg"
+        alt="Vivek Kumar"
+        class="relative w-64 h-64 object-cover rounded-full shadow-lg border-4 border-white">
     </div>
 
   </div>
