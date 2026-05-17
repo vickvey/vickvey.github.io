@@ -38,20 +38,22 @@ const renderProjects = async () => {
       return;
     }
 
-    container.innerHTML = projects.map(p => `
+    container.innerHTML = projects
+      .map(
+        (p) => `
       <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg hover:scale-101 transition-all duration-300">
 
         <!-- Image -->
         <img src="${p.image}" class="w-full h-40 object-cover rounded mb-4" />
 
         <!-- Title -->
-        <h3 class="text-xl font-semibold mb-1">${p.title}</h3>
+        <h3 class="text-2xl font-semibold my-4">${p.title}</h3>
 
         <!-- Duration -->
         <p class="text-sm text-gray-500 mb-2">${p.duration}</p>
 
         <!-- Description -->
-        <p class="text-gray-600 mb-4 text-sm">
+        <p class="text-gray-600 mb-4 text-base">
           ${p.description}
         </p>
 
@@ -60,18 +62,22 @@ const renderProjects = async () => {
 
         <!-- Keywords -->
         <div class="flex flex-wrap gap-2 mb-4">
-          ${p.keywords.map(k => `
+          ${p.keywords
+            .map(
+              (k) => `
             <span class="text-xs px-2 py-1 bg-gray-100 rounded">${k}</span>
-          `).join("")}
+          `,
+            )
+            .join("")}
         </div>
 
         <!-- Actions -->
         <div class="flex justify-between items-center text-sm">
 
-          ${p.report 
+          ${p.report
             ? `<button onclick="openPDF('${p.report}')" class="text-blue-600 hover:underline">
                  View Report
-               </button>` 
+               </button>`
             : `<span></span>`
           }
 
@@ -82,8 +88,9 @@ const renderProjects = async () => {
         </div>
 
       </div>
-    `).join("");
-
+    `,
+      )
+      .join("");
   } catch (err) {
     console.error("❌ Failed to render projects", err);
   }
@@ -104,7 +111,6 @@ const renderProjects = async () => {
     await loadComponent("skills", "components/skills.html");
     await loadComponent("achievements", "components/achievements.html");
     await loadComponent("education", "components/education.html");
-
   } catch (err) {
     console.error("❌ App initialization failed", err);
   }

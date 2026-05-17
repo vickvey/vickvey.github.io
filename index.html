@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,9 +10,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles/custom.css">
   <style>
-  html {
-    font-size: 18px; /* default is 16px */
-  }
+    html {
+      font-size: 16px;
+      /* default is 16px */
+    }
   </style>
 </head>
 
@@ -27,9 +29,7 @@
     </button>
 
     <!-- PDF Viewer -->
-    <iframe id="pdf-frame"
-      class="w-full h-full"
-      src="">
+    <iframe id="pdf-frame" class="w-full h-full" src="">
     </iframe>
 
   </div>
@@ -37,49 +37,49 @@
 
 <body>
   <div id="header"></div>
-  <main class="flex flex-col gap-20 py-10">
-    <div id="hero"></div>
-    <div id="about"></div>
-    <div id="projects"></div>
+  <main class="flex flex-col pt-10">
+    <div id="hero" class="border-t"></div>
+    <div id="about" class="border-t"></div>
+    <div id="projects" class="border-t"></div>
     <!-- <div id="experience"></div> -->
-    <div id="achievements"></div>
-    <div id="skills"></div>
-    <div id="education"></div>
+    <div id="achievements" class="border-t"></div>
+    <div id="skills" class="border-t"></div>
+    <div id="education" class="border-t"></div>
   </main>
-  
+
   <footer class="bg-gray-800 text-white text-center py-4">
     <p>&copy; 2026 Vivek Kumar. All rights reserved.</p>
   </footer>
 
   <script src="js/loadComponents.js"></script>
   <script>
-  const overlay = document.getElementById("pdf-overlay");
-  const frame = document.getElementById("pdf-frame");
-  const closeBtn = document.getElementById("close-pdf");
+    const overlay = document.getElementById("pdf-overlay");
+    const frame = document.getElementById("pdf-frame");
+    const closeBtn = document.getElementById("close-pdf");
 
-  // Open PDF
-  const openPDF = (url) => {
-    frame.src = url;
-    overlay.classList.remove("hidden");
-    document.body.classList.add("overflow-hidden"); // prevent background scroll
-  };
+    // Open PDF
+    const openPDF = (url) => {
+      frame.src = url;
+      overlay.classList.remove("hidden");
+      document.body.classList.add("overflow-hidden"); // prevent background scroll
+    };
 
-  // Close PDF
-  closeBtn.addEventListener("click", () => {
-    overlay.classList.add("hidden");
-    frame.src = "";
-    document.body.classList.remove("overflow-hidden");
-  });
-
-  // Optional: click outside to close
-  overlay.addEventListener("click", (e) => {
-    if (e.target === overlay) {
+    // Close PDF
+    closeBtn.addEventListener("click", () => {
       overlay.classList.add("hidden");
       frame.src = "";
       document.body.classList.remove("overflow-hidden");
-    }
-  });
-</script>
+    });
+
+    // Optional: click outside to close
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) {
+        overlay.classList.add("hidden");
+        frame.src = "";
+        document.body.classList.remove("overflow-hidden");
+      }
+    });
+  </script>
 </body>
 
 </html>
