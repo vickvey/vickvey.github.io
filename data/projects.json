@@ -12,9 +12,9 @@
 			"Python"
 		],
 		"image": "assets/images/projects/bsproject.png",
-		"guide": null,
-		"report": "assets/pdfs/portfolio.pdf",
-		"github": "https://github.com/vickvey/investment-portfolio-analysis"
+		"guide": "Dr. Kundan Kandhway",
+		"report": "assets/pdfs/VIVEK_22372_BS_PROJECT_THESIS_REPORT-2.pdf",
+		"github": "https://github.com/vickvey/bs-project"
 	},
 	{
 		"title": "Investment Portfolio Optimization and Risk Analysis",
@@ -42,7 +42,7 @@
 			"Data Analysis"
 		],
 		"image": "assets/images/projects/network-nifty200.png",
-		"guide": null,
+		"guide": "Dr. Kundan Kandhway",
 		"report": "assets/pdfs/network-nifty200.pdf",
 		"github": "https://github.com/vickvey/net-sci-asn"
 	},
