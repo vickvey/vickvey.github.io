@@ -1,19 +1,20 @@
-<header class="fixed top-0 w-full bg-white/90 backdrop-blur border-b z-50">
+<header class="fixed top-0 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur border-b dark:border-gray-800 z-50">
   <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
 
     <!-- Logo -->
-    <div class="text-2xl md:text-xl font-thin tracking-tight">
+    <div class="text-xl md:text-2xl font-thin tracking-tight">
       Vivek Kumar
     </div>
 
     <!-- Desktop Nav -->
     <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
-      <a href="#hero" class="hover:text-blue-600">Home</a>
-      <a href="#about" class="hover:text-blue-600">About</a>
-      <a href="#projects" class="hover:text-blue-600">Projects</a>
-      <a href="#achievements" class="hover:text-blue-600">Achievements</a>
-      <a href="#skills" class="hover:text-blue-600">Skills</a>
-      <a href="#education" class="hover:text-blue-600">Education</a>
+      <a href="#hero" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
+      <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
+      <a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Experience</a>
+      <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Projects</a>
+      <a href="#achievements" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Achievements</a>
+      <a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Skills</a>
+      <a href="#education" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Education</a>
     </nav>
 
     <!-- CTA (Desktop) -->
@@ -22,23 +23,30 @@
       Contact
     </a>
 
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" type="button" aria-label="Toggle dark mode"
+      class="inline-flex items-center justify-center w-9 h-9 ml-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+      <span id="theme-toggle-icon">🌙</span>
+    </button>
+
     <!-- Mobile Menu Button -->
-    <button id="menu-btn" class="md:hidden text-2xl">
+    <button id="menu-btn" class="md:hidden text-2xl ml-3">
       ☰
     </button>
   </div>
 
   <!-- Mobile Dropdown -->
-  <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 border-t">
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 border-t dark:border-gray-800">
     <div class="flex flex-col space-y-4 text-sm font-medium pt-4">
       <a href="#hero">Home</a>
       <a href="#about">About</a>
+      <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#achievements">Achievements</a>
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
 
-      <a href="mailto:example@example.com" class="mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg text-center">
+      <a href="mailto:vivek.indie.dev@gmail.com" class="mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg text-center">
         Contact
       </a>
     </div>

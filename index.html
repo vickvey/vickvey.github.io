@@ -8,6 +8,21 @@
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+    };
+  </script>
+  <script>
+    // Apply saved/system theme before first paint to avoid a flash
+    (function () {
+      const stored = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (stored === "dark" || (!stored && prefersDark)) {
+        document.documentElement.classList.add("dark");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="styles/custom.css">
   <style>
     html {
@@ -20,11 +35,11 @@
 <!-- PDF Overlay -->
 <div id="pdf-overlay" class="fixed inset-0 bg-black/70 hidden z-[100] flex items-center justify-center">
 
-  <div class="relative w-[95%] h-[90%] bg-white rounded-xl shadow-lg overflow-hidden">
+  <div class="relative w-[95%] h-[90%] bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden">
 
     <!-- Close Button -->
     <button id="close-pdf"
-      class="absolute top-3 right-3 z-10 px-3 py-1 bg-gray-800 text-white rounded hover:bg-gray-700">
+      class="absolute top-3 right-3 z-10 px-3 py-1 bg-gray-800 dark:bg-gray-700 text-white rounded hover:bg-gray-700 dark:hover:bg-gray-600">
       ✕
     </button>
 
@@ -35,19 +50,19 @@
   </div>
 </div>
 
-<body>
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors">
   <div id="header"></div>
   <main class="flex flex-col pt-10">
-    <div id="hero" class="border-t"></div>
-    <div id="about" class="border-t"></div>
-    <div id="projects" class="border-t"></div>
-    <!-- <div id="experience"></div> -->
-    <div id="achievements" class="border-t"></div>
-    <div id="skills" class="border-t"></div>
-    <div id="education" class="border-t"></div>
+    <div id="hero" class="border-t dark:border-gray-800"></div>
+    <div id="about" class="border-t dark:border-gray-800"></div>
+    <div id="experience" class="border-t dark:border-gray-800"></div>
+    <div id="projects" class="border-t dark:border-gray-800"></div>
+    <div id="achievements" class="border-t dark:border-gray-800"></div>
+    <div id="skills" class="border-t dark:border-gray-800"></div>
+    <div id="education" class="border-t dark:border-gray-800"></div>
   </main>
 
-  <footer class="bg-gray-800 text-white text-center py-4">
+  <footer class="bg-gray-800 dark:bg-gray-950 text-white text-center py-4">
     <p>&copy; 2026 Vivek Kumar. All rights reserved.</p>
   </footer>
 

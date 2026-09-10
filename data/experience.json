@@ -1,0 +1,38 @@
+[
+	{
+		"title": "Project Associate (Junior Research Fellow)",
+		"organization": "IIT Gandhinagar",
+		"location": "Gandhinagar, India",
+		"duration": "July 2026 - Present",
+		"description": "Working on satellite and geospatial data analysis with applications in agriculture, building pipelines to process remote-sensing data into actionable agricultural insights.",
+		"keywords": ["Satellite Data", "Geospatial Analysis", "Remote Sensing", "Agriculture", "Python"],
+		"image": "https://placehold.co/600x400?text=IIT+Gandhinagar"
+	},
+	{
+		"title": "Research Intern",
+		"organization": "IIT Gandhinagar",
+		"location": "Gandhinagar, India",
+		"duration": "May 2026 - June 2026",
+		"description": "Worked on ApneaEye Project, exploring and contributing in the understanding of Hierarchical Object Detection in detecting nostrils properly",
+		"keywords": ["Healthcare", "Object Detection", "Computer Vision"],
+		"image": "https://placehold.co/600x400?text=Experience"
+	},
+	{
+		"title": "BS Thesis",
+		"organization": "IISER Bhopal",
+		"location": "Bhopal, India",
+		"duration": "TODO: Start - End",
+		"description": "TODO: Add a brief description of your role, responsibilities, and key outcomes.",
+		"keywords": ["TODO", "Add", "Skills"],
+		"image": "https://placehold.co/600x400?text=Experience"
+	},
+	{
+		"title": "TODO: Role Title",
+		"organization": "TODO: Organization Name",
+		"location": "TODO: Location",
+		"duration": "TODO: Start - End",
+		"description": "TODO: Add a brief description of your role, responsibilities, and key outcomes.",
+		"keywords": ["TODO", "Add", "Skills"],
+		"image": "https://placehold.co/600x400?text=Experience"
+	}
+]
