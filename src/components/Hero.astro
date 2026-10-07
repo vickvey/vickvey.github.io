@@ -1,0 +1,73 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import profile from "../data/profile.json";
+import profilePhoto from "../assets/images/profile.jpg";
+
+// The first experience entry is the current role, so it can't drift from the Experience section
+const [current] = (await getCollection("experience")).sort((a, b) => a.data.order - b.data.order);
+const highlights = [`${current.data.title} @ ${current.data.organization}`, ...profile.heroHighlights];
+---
+
+<section id="hero" class="min-h-screen -mt-16 pt-16 flex items-center bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-950">
+  <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 px-6 items-center">
+    <div class="order-2 lg:order-1">
+      <p class="text-sm text-blue-600 dark:text-blue-400 font-medium tracking-wide mb-3">{profile.tagline}</p>
+      <h1 class="text-5xl font-semibold leading-tight mb-6">{profile.name}</h1>
+      <p class="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">{profile.headline}</p>
+
+      <ul class="space-y-3 mb-8">
+        {
+          highlights.map((h) => (
+            <li class="flex items-start space-x-3">
+              <span class="mt-1.5 w-2 h-2 shrink-0 bg-blue-600 dark:bg-blue-500 rounded-full" />
+              <span class="text-gray-600 dark:text-gray-400 text-sm">{h}</span>
+            </li>
+          ))
+        }
+      </ul>
+
+      <ul class="flex flex-wrap gap-2 mb-8">
+        {
+          profile.heroTags.map((t) => (
+            <li class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm">{t}</li>
+          ))
+        }
+      </ul>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#projects" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 shadow-sm transition">
+          View Research
+        </a>
+        <button
+          type="button"
+          data-pdf={profile.cv}
+          class="px-6 py-3 border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+        >
+          View CV
+        </button>
+        <a
+          href={profile.github}
+          target="_blank"
+          rel="noopener"
+          class="px-6 py-3 border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+        >
+          GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="order-1 lg:order-2 flex items-center justify-center">
+      <div class="w-72 h-72 sm:w-80 sm:h-80 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
+        <Image
+          src={profilePhoto}
+          alt={profile.name}
+          width={576}
+          height={576}
+          loading="eager"
+          class="w-64 h-64 sm:w-72 sm:h-72 object-cover rounded-full shadow-lg border-4 border-white dark:border-gray-900"
+        />
+      </div>
+    </div>
+  </div>
+</section>

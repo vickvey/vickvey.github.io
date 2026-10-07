@@ -1,0 +1,24 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  /** Tinted background, used to alternate sections */
+  alt?: boolean;
+  width?: "5xl" | "4xl";
+}
+
+const { id, title, alt = false, width = "5xl" } = Astro.props;
+---
+
+<section
+  id={id}
+  class:list={[
+    "py-20 border-t dark:border-gray-800",
+    alt && "bg-gray-50 dark:bg-gray-950",
+  ]}
+>
+  <div class:list={["mx-auto px-6", width === "4xl" ? "max-w-4xl" : "max-w-5xl"]}>
+    <h2 class="text-4xl font-semibold mb-10">{title}</h2>
+    <slot />
+  </div>
+</section>

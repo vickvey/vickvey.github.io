@@ -1,0 +1,7 @@
+[
+	{ "title": "Programming", "text": "Python (advanced), C++, C" },
+	{ "title": "Machine Learning", "text": "PyTorch, Scikit-learn, Graph ML, Time-Series Modeling, Representation Learning" },
+	{ "title": "Data & Analysis", "text": "NumPy, Pandas, Data Pipelines, Feature Engineering, Statistical Analysis" },
+	{ "title": "Mathematics", "text": "Linear Algebra, Probability & Statistics, Optimization (Linear, Convex)" },
+	{ "title": "Tools & Systems", "text": "Git, Linux, Jupyter Notebooks, FastAPI", "wide": true }
+]

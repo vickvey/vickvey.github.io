@@ -1,0 +1,13 @@
+---
+import { getCollection } from "astro:content";
+import Section from "./Section.astro";
+import ProjectCard from "./ProjectCard.astro";
+
+const projects = (await getCollection("projects")).sort((a, b) => a.data.order - b.data.order);
+---
+
+<Section id="projects" title="Projects">
+  <div class="grid md:grid-cols-2 gap-8">
+    {projects.map((p) => <ProjectCard project={p.data} />)}
+  </div>
+</Section>
