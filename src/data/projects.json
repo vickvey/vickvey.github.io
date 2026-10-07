@@ -1,5 +1,7 @@
 [
 	{
+		"id": "bs-project",
+		"order": 1,
 		"title": "A Quantitative Study of Technical Analysis Indicators and Intraday Trading Strategies on Indian Equity Market Data",
 		"duration": "Jan 2026 to Apr 2026",
 		"description": "Analysis of different technical analysis indicators and Backtesting Research of intraday trading strategies",
@@ -11,12 +13,15 @@
 			"Backtesting",
 			"Python"
 		],
-		"image": "assets/images/projects/bsproject.png",
+		"image": "../assets/images/projects/bsproject.png",
 		"guide": "Dr. Kundan Kandhway",
-		"report": "assets/pdfs/VIVEK_22372_BS_PROJECT_THESIS_REPORT-2.pdf",
+		"reportPdf": "/pdfs/bs-project-thesis.pdf",
+		"slidesPdf": "/pdfs/bs-project-slides.pdf",
 		"github": "https://github.com/vickvey/bs-project"
 	},
 	{
+		"id": "investment-portfolio",
+		"order": 2,
 		"title": "Investment Portfolio Optimization and Risk Analysis",
 		"duration": "Aug 2025 to Mar 2026",
 		"description": "Mean-variance optimization framework with efficient frontier analysis and experimentation under varying constraints.",
@@ -26,12 +31,13 @@
 			"Financial Modeling",
 			"Python"
 		],
-		"image": "assets/images/projects/portfolio.png",
-		"guide": null,
-		"report": "assets/pdfs/portfolio.pdf",
+		"image": "../assets/images/projects/portfolio.png",
+		"reportPdf": "/pdfs/investment-portfolio.pdf",
 		"github": "https://github.com/vickvey/investment-portfolio-analysis"
 	},
 	{
+		"id": "nifty200-network",
+		"order": 3,
 		"title": "Network Analysis of NSE NIFTY-200 Stocks",
 		"duration": "Aug 2025 to Nov 2025",
 		"description": "Constructed correlation-based financial network and analyzed structure using centrality, clustering, and community detection.",
@@ -41,39 +47,59 @@
 			"NetworkX",
 			"Data Analysis"
 		],
-		"image": "assets/images/projects/network-nifty200.png",
+		"image": "../assets/images/projects/network-nifty200.png",
 		"guide": "Dr. Kundan Kandhway",
-		"report": "assets/pdfs/network-nifty200.pdf",
+		"reportPdf": "/pdfs/network-nifty200.pdf",
 		"github": "https://github.com/vickvey/net-sci-asn"
 	},
 	{
+		"id": "author-collab",
+		"order": 4,
 		"title": "Author Collaboration Network & Link Prediction",
 		"duration": "Aug 2025 to Nov 2025",
 		"description": "Large-scale link prediction on OGBL-Collab using Node2Vec, GNNs, and supervised learning pipelines.",
-		"keywords": ["Graph Mining", "GNNs", "Node2Vec", "PyTorch"],
-		"image": "assets/images/projects/author-collab.png",
+		"keywords": [
+			"Graph Mining",
+			"GNNs",
+			"Node2Vec",
+			"PyTorch"
+		],
+		"image": "../assets/images/projects/author-collab.png",
 		"guide": "Dr. Akash Anil",
-		"report": "assets/pdfs/author-collab.pdf",
+		"reportPdf": "/pdfs/author-collab.pdf",
 		"github": "https://github.com/vickvey/author-collab"
 	},
 	{
+		"id": "modern-tabasco",
+		"order": 5,
 		"title": "Modern TABASCO: Textual Ambiguity Detection",
 		"duration": "May 2025 to Aug 2025",
 		"description": "NLP pipeline improving PDF extraction accuracy by 50% and reducing processing time by 60%.",
-		"keywords": ["NLP", "BERT", "FastAPI", "Next.js"],
-		"image": "assets/images/projects/modern-tabasco.png",
+		"keywords": [
+			"NLP",
+			"BERT",
+			"FastAPI",
+			"Next.js"
+		],
+		"image": "../assets/images/projects/modern-tabasco.png",
 		"guide": "Dr. Arpit Sharma",
-		"report": "https://github.com/vickvey/modern-tabasco/blob/main/README.md",
+		"reportUrl": "https://github.com/vickvey/modern-tabasco/blob/main/README.md",
 		"github": "https://github.com/vickvey/modern-tabasco"
 	},
 	{
+		"id": "ppg-anxiety",
+		"order": 6,
 		"title": "Anxiety Prediction using PPG Signals",
 		"duration": "Apr 2024 to Aug 2024",
 		"description": "End-to-end ML pipeline using physiological signals with HRV feature extraction and classification.",
-		"keywords": ["Biomedical ML", "HRV", "Signal Processing"],
-		"image": "assets/images/projects/ppg-example.png",
+		"keywords": [
+			"Biomedical ML",
+			"HRV",
+			"Signal Processing"
+		],
+		"image": "../assets/images/projects/ppg-example.png",
 		"guide": "Dr. Haroon Lone",
-		"report": "https://github.com/vickvey/Project-PPG/blob/master/README.md",
+		"reportUrl": "https://github.com/vickvey/Project-PPG/blob/master/README.md",
 		"github": "https://github.com/vickvey/Project-PPG"
 	}
 ]

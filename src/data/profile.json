@@ -1,0 +1,13 @@
+{
+	"name": "Vivek Kumar",
+	"tagline": "Researcher - Data Science - Finance Management - Optimization",
+	"headline": "Building data-driven systems for complex real-world problems.",
+	"email": "vivek.indie.dev@gmail.com",
+	"github": "https://github.com/vickvey",
+	"cv": "/pdfs/vivek-kumar-cv.pdf",
+	"heroHighlights": [
+		"Working on satellite & geospatial data analysis for applications in agriculture",
+		"Focus: ML + Optimization for decision-making under uncertainty"
+	],
+	"heroTags": ["Data Science", "Applied ML", "Optimization", "Time Series", "Decision Systems"]
+}

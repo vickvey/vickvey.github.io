@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import Keywords from "./Keywords.astro";
+
+interface Props {
+  project: CollectionEntry<"projects">["data"];
+}
+const { project: p } = Astro.props;
+const link = "text-blue-600 dark:text-blue-400 hover:underline";
+---
+
+<article class="flex flex-col bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300">
+  <Image src={p.image} alt="" width={800} class="w-full h-40 object-cover rounded mb-4" />
+  <h3 class="text-2xl font-semibold my-4">{p.title}</h3>
+  <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">{p.duration}</p>
+  <p class="text-gray-600 dark:text-gray-400 mb-4">{p.description}</p>
+  {p.guide && <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Guide: {p.guide}</p>}
+  <Keywords items={p.keywords} class="mb-4" />
+
+  <div class="mt-auto flex flex-wrap justify-between items-center gap-x-4 gap-y-2 text-sm">
+    <div class="flex gap-4">
+      {p.reportPdf && <button type="button" data-pdf={p.reportPdf} class={link}>View Report</button>}
+      {p.slidesPdf && <button type="button" data-pdf={p.slidesPdf} class={link}>Slides</button>}
+      {p.reportUrl && <a href={p.reportUrl} target="_blank" rel="noopener" class={link}>README</a>}
+    </div>
+    <a href={p.github} target="_blank" rel="noopener" class="text-gray-700 dark:text-gray-300 hover:underline">GitHub</a>
+  </div>
+</article>

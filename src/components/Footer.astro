@@ -1,0 +1,14 @@
+---
+import profile from "../data/profile.json";
+---
+
+<footer class="bg-gray-800 dark:bg-gray-950 text-white py-6">
+  <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
+    <p>&copy; {new Date().getFullYear()} {profile.name}. All rights reserved.</p>
+    <nav class="flex gap-5" aria-label="Elsewhere">
+      <a href={profile.github} target="_blank" rel="noopener" class="hover:underline">GitHub</a>
+      <a href={`mailto:${profile.email}`} class="hover:underline">Email</a>
+      <a href="/rss.xml" class="hover:underline">RSS</a>
+    </nav>
+  </div>
+</footer>

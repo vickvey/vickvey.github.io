@@ -1,0 +1,18 @@
+{
+	"intro": "I graduated with a B.S. in Computer Science from IISER Bhopal in May 2026, and I currently work as a Project Associate (Junior Research Fellow) under **Prof. Nipun Batra at IIT Gandhinagar**. My work sits at the intersection of **data science, machine learning, and applied statistics**.",
+	"focus": "Building satellite data extraction pipelines across bands such as NDVI, analyzing the resulting remote sensing data, and developing ML models on top of it to predict crop outcomes.",
+	"bullets": [
+		"Working hands-on with multi-band satellite and remote sensing datasets",
+		"Deeply drawn to probability, statistics, mathematics, and numbers",
+		"Enjoy experimenting, observing outcomes, and building hypotheses around them"
+	],
+	"direction": "In the long term, I want to transition toward quant or other fields where applied statistics, ML/AI, and mathematical modeling drive the work — leaning on a sharp, rigorous handle on the underlying math.",
+	"interests": [
+		{ "label": "Probability & Statistics" },
+		{ "label": "Applied Machine Learning" },
+		{ "label": "Mathematical Modeling" },
+		{ "label": "Remote Sensing & Geospatial ML" },
+		{ "label": "Data-driven Decision Systems" },
+		{ "label": "Quantitative Finance", "accent": "green" }
+	]
+}
