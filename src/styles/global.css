@@ -15,6 +15,13 @@ html {
   color-scheme: light;
 }
 
+/* No fixed header on wide screens: the sidebar replaces it (xl breakpoint) */
+@media (width >= 80rem) {
+  html {
+    scroll-padding-top: 0;
+  }
+}
+
 html.dark {
   color-scheme: dark;
 }

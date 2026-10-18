@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
 import Footer from "../components/Footer.astro";
 import PdfModal from "../components/PdfModal.astro";
 import ContactPanel from "../components/ContactPanel.astro";
@@ -63,14 +64,27 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   </head>
   <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors">
     <Header />
-    <main class="pt-16">
-      <slot />
-    </main>
-    <Footer />
+    <Sidebar />
+    <div class="xl:pl-64">
+      <main class="pt-16 xl:pt-0">
+        <slot />
+      </main>
+      <Footer />
+    </div>
     <PdfModal />
     <ContactPanel />
 
     <script>
+      // Header and sidebar each render a toggle; only one is visible at a time
+      document.querySelectorAll("[data-theme-toggle]").forEach((btn) =>
+        btn.addEventListener("click", () => {
+          const dark = document.documentElement.classList.toggle("dark");
+          try {
+            localStorage.setItem("theme", dark ? "dark" : "light");
+          } catch {}
+        }),
+      );
+
       // Email links carry a base64 address and only become mailto: when clicked
       document.addEventListener("click", (e) => {
         const link = (e.target as Element).closest<HTMLAnchorElement>("a[data-email]");

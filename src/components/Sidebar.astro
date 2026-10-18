@@ -1,0 +1,89 @@
+---
+import profile from "../data/profile.json";
+import socials from "../data/socials.json";
+import links from "../data/nav.json";
+import SocialIcon from "./SocialIcon.astro";
+
+const onBlog = Astro.url.pathname.startsWith("/blog");
+---
+
+<!-- Replaces the header on wide screens (xl+); Header.astro hides itself at the same breakpoint -->
+<aside
+  id="sidebar"
+  class="hidden xl:flex fixed inset-y-0 left-0 z-40 w-64 flex-col overflow-y-auto border-r dark:border-gray-800 bg-white dark:bg-gray-900 px-8 py-10"
+>
+  <a href="/" class="text-2xl font-thin tracking-tight">{profile.name}</a>
+
+  <nav class="mt-10 flex flex-col gap-1 text-sm font-medium" aria-label="Main">
+    {
+      links.map((l) => (
+        <a
+          href={l.href}
+          aria-current={l.href === "/blog/" && onBlog ? "page" : undefined}
+          class="-mx-3 px-3 py-2 rounded-lg text-gray-600 dark:text-gray-400 hover:text-gray-900 hover:bg-gray-100 dark:hover:text-gray-100 dark:hover:bg-gray-800 transition-colors [&[aria-current]]:text-blue-600 [&[aria-current]]:bg-blue-50 dark:[&[aria-current]]:text-blue-400 dark:[&[aria-current]]:bg-blue-950/50"
+        >
+          {l.label}
+        </a>
+      ))
+    }
+  </nav>
+
+  <div class="mt-auto pt-10 space-y-5">
+    <button
+      type="button"
+      popovertarget="contact-panel"
+      class="w-full px-4 py-2 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+    >
+      Contact
+    </button>
+
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        {
+          socials.map((s) => (
+            <a
+              href={s.url}
+              target="_blank"
+              rel="noopener"
+              aria-label={s.label}
+              title={s.label}
+              class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+            >
+              <SocialIcon icon={s.icon} label={s.label} class="w-4 h-4" />
+            </a>
+          ))
+        }
+      </div>
+
+      <button
+        data-theme-toggle
+        type="button"
+        aria-label="Toggle dark mode"
+        class="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+      >
+        <span class="dark:hidden" aria-hidden="true">🌙</span>
+        <span class="hidden dark:inline" aria-hidden="true">☀️</span>
+      </button>
+    </div>
+  </div>
+</aside>
+
+<script>
+  // Highlight the section currently crossing the middle of the viewport (home page only)
+  const sectionLinks = document.querySelectorAll<HTMLAnchorElement>("#sidebar a[href^='/#']");
+  const linkFor = new Map([...sectionLinks].map((a) => [a.hash.slice(1), a]));
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        sectionLinks.forEach((a) => a.removeAttribute("aria-current"));
+        linkFor.get(e.target.id)?.setAttribute("aria-current", "location");
+      }
+    },
+    { rootMargin: "-50% 0px -50% 0px" },
+  );
+  linkFor.forEach((_, id) => {
+    const section = document.getElementById(id);
+    if (section) observer.observe(section);
+  });
+</script>
