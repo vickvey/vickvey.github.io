@@ -1,5 +1,5 @@
 {
-	"intro": "I graduated with a B.S. in Computer Science from IISER Bhopal in May 2026, and I currently work as a Project Associate (Junior Research Fellow) under **Prof. Nipun Batra at IIT Gandhinagar**. My work sits at the intersection of **data science, machine learning, and applied statistics**.",
+	"intro": "I graduated with a B.S. in Computer Science from IISER Bhopal in May 2026, and I currently work as a Project Associate (Junior Research Fellow) at **Stealth**. My work sits at the intersection of **data science, machine learning, and applied statistics**.",
 	"focus": "Building satellite data extraction pipelines across bands such as NDVI, analyzing the resulting remote sensing data, and developing ML models on top of it to predict crop outcomes.",
 	"bullets": [
 		"Working hands-on with multi-band satellite and remote sensing datasets",

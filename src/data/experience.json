@@ -1,10 +1,10 @@
 [
 	{
-		"id": "iitgn-jrf",
+		"id": "stealth-jrf",
 		"order": 1,
 		"title": "Project Associate (Junior Research Fellow)",
-		"organization": "IIT Gandhinagar",
-		"location": "Gandhinagar, India",
+		"organization": "Stealth",
+		"location": "India",
 		"duration": "July 2026 - Present",
 		"description": "Working on satellite and geospatial data analysis with applications in agriculture, building pipelines to process remote-sensing data into actionable agricultural insights.",
 		"keywords": [
@@ -16,11 +16,11 @@
 		]
 	},
 	{
-		"id": "iitgn-intern",
+		"id": "stealth-intern",
 		"order": 2,
 		"title": "Research Intern",
-		"organization": "IIT Gandhinagar",
-		"location": "Gandhinagar, India",
+		"organization": "Stealth",
+		"location": "India",
 		"duration": "May 2026 - June 2026",
 		"description": "Worked on ApneaEye Project, exploring and contributing in the understanding of Hierarchical Object Detection in detecting nostrils properly",
 		"keywords": [
