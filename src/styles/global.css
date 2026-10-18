@@ -7,6 +7,40 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Lora", ui-serif, Georgia, serif;
+
+  /* Softer palette: a warm, low-glare gray scale replaces Tailwind's cool one.
+     Light mode sits on off-white paper; dark mode on a dim charcoal rather than near-black.
+     Text shades keep at least 4.5:1 contrast against the surfaces they're used on. */
+  --color-paper: #faf8f4;
+  --color-gray-50: #f2efe9;
+  --color-gray-100: #e9e5de;
+  --color-gray-200: #dcd7cf;
+  --color-gray-300: #c9c3b9;
+  --color-gray-400: #aca69c;
+  --color-gray-500: #716c64;
+  --color-gray-600: #5a5650;
+  --color-gray-700: #45423d;
+  --color-gray-800: #36332f;
+  --color-gray-900: #2a2825;
+  --color-gray-950: #22201e;
+
+  /* Larger type: small text was too small to read comfortably */
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.1875rem;
+
+  --leading-relaxed: 1.75;
+  --leading-loose: 1.9;
+}
+
+/* Tailwind v4 defaults borders to currentColor, which drew harsh dark lines in light mode */
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--color-gray-200);
+  }
 }
 
 html {
@@ -26,16 +60,71 @@ html.dark {
   color-scheme: dark;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (width >= 64rem) {
+  body {
+    font-size: 1.125rem;
+  }
+}
+
+/* Visible keyboard focus everywhere, without showing on mouse clicks */
+:focus-visible {
+  outline: 2px solid var(--color-blue-500);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
   font-weight: 600;
   letter-spacing: -0.01em;
+}
+
+/* The typography plugin hardcodes its own grays; point it at the palette above.
+   Unlayered, so this beats the plugin's prose-* classes, hence the explicit dark block. */
+.prose {
+  --tw-prose-body: var(--color-gray-800);
+  --tw-prose-headings: var(--color-gray-900);
+  --tw-prose-lead: var(--color-gray-600);
+  --tw-prose-bold: var(--color-gray-900);
+  --tw-prose-counters: var(--color-gray-500);
+  --tw-prose-bullets: var(--color-gray-400);
+  --tw-prose-hr: var(--color-gray-200);
+  --tw-prose-quotes: var(--color-gray-900);
+  --tw-prose-quote-borders: var(--color-gray-300);
+  --tw-prose-captions: var(--color-gray-500);
+  --tw-prose-code: var(--color-gray-900);
+  --tw-prose-th-borders: var(--color-gray-300);
+  --tw-prose-td-borders: var(--color-gray-200);
+}
+
+.dark .prose {
+  --tw-prose-body: var(--color-gray-200);
+  --tw-prose-headings: var(--color-gray-50);
+  --tw-prose-lead: var(--color-gray-400);
+  --tw-prose-bold: var(--color-gray-50);
+  --tw-prose-counters: var(--color-gray-400);
+  --tw-prose-bullets: var(--color-gray-600);
+  --tw-prose-hr: var(--color-gray-700);
+  --tw-prose-quotes: var(--color-gray-100);
+  --tw-prose-quote-borders: var(--color-gray-700);
+  --tw-prose-captions: var(--color-gray-400);
+  --tw-prose-code: var(--color-gray-50);
+  --tw-prose-th-borders: var(--color-gray-600);
+  --tw-prose-td-borders: var(--color-gray-700);
 }
 
 /* Shiki dual themes: switch to the dark variables under .dark */

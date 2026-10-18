@@ -10,14 +10,14 @@ const entries = (await getCollection("experience")).sort((a, b) => a.data.order 
   <div class="grid md:grid-cols-2 gap-8">
     {
       entries.map(({ data: e }) => (
-        <article class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300">
+        <article class="bg-paper dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md hover:scale-[1.01] transition-all duration-300">
           <h3 class="text-2xl font-semibold mb-2">{e.title}</h3>
           <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">
             {e.organization}
             {e.location && ` • ${e.location}`}
           </p>
           <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">{e.duration}</p>
-          <p class="text-gray-600 dark:text-gray-400 mb-4">{e.description}</p>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">{e.description}</p>
           <Keywords items={e.keywords} />
         </article>
       ))

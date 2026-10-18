@@ -11,7 +11,7 @@ const highlights = [`${current.data.title} @ ${current.data.organization}`, ...p
 const github = socials.find((s) => s.icon === "github");
 ---
 
-<section id="hero" class="min-h-screen -mt-16 pt-16 xl:mt-0 xl:pt-0 flex items-center bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-950">
+<section id="hero" class="min-h-screen -mt-16 pt-16 xl:mt-0 xl:pt-0 flex items-center bg-gradient-to-b from-paper to-gray-50 dark:from-gray-900 dark:to-gray-950">
   <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 px-6 items-center">
     <div class="order-2 lg:order-1">
       <p class="text-sm text-blue-600 dark:text-blue-400 font-medium tracking-wide mb-3">{profile.tagline}</p>
@@ -22,8 +22,8 @@ const github = socials.find((s) => s.icon === "github");
         {
           highlights.map((h) => (
             <li class="flex items-start space-x-3">
-              <span class="mt-1.5 w-2 h-2 shrink-0 bg-blue-600 dark:bg-blue-500 rounded-full" />
-              <span class="text-gray-600 dark:text-gray-400 text-sm">{h}</span>
+              <span class="mt-2.5 w-2 h-2 shrink-0 bg-blue-600 dark:bg-blue-500 rounded-full" />
+              <span class="text-gray-700 dark:text-gray-300">{h}</span>
             </li>
           ))
         }
@@ -75,7 +75,7 @@ const github = socials.find((s) => s.icon === "github");
           width={576}
           height={576}
           loading="eager"
-          class="w-64 h-64 sm:w-72 sm:h-72 object-cover rounded-full shadow-lg border-4 border-white dark:border-gray-900"
+          class="w-64 h-64 sm:w-72 sm:h-72 object-cover rounded-full shadow-lg border-4 border-paper dark:border-gray-900"
         />
       </div>
     </div>

@@ -19,7 +19,7 @@ import { inline } from "../lib/inline";
           <p class="text-gray-500 dark:text-gray-400">
             {e.institution} • {e.period}
           </p>
-          {e.note && <p class="text-gray-600 dark:text-gray-400 mt-2" set:html={inline(e.note)} />}
+          {e.note && <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-2" set:html={inline(e.note)} />}
         </li>
       ))
     }

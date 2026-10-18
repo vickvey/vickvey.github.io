@@ -4,10 +4,11 @@ interface Props {
   title: string;
   /** Tinted background, used to alternate sections */
   alt?: boolean;
-  width?: "5xl" | "4xl";
+  width?: "5xl" | "4xl" | "3xl";
 }
 
 const { id, title, alt = false, width = "5xl" } = Astro.props;
+const maxWidth = { "5xl": "max-w-5xl", "4xl": "max-w-4xl", "3xl": "max-w-3xl" }[width];
 ---
 
 <section
@@ -17,7 +18,7 @@ const { id, title, alt = false, width = "5xl" } = Astro.props;
     alt && "bg-gray-50 dark:bg-gray-950",
   ]}
 >
-  <div class:list={["mx-auto px-6", width === "4xl" ? "max-w-4xl" : "max-w-5xl"]}>
+  <div class:list={["mx-auto px-6", maxWidth]}>
     <h2 class="text-4xl font-semibold mb-10">{title}</h2>
     <slot />
   </div>
