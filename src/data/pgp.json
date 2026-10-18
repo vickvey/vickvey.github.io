@@ -1,0 +1,7 @@
+{
+	"fingerprint": "B59D5C59A43EAF50AFDCBEA1D2A1891842EF9407",
+	"algorithm": "Ed25519 (sign, certify) · Curve25519 subkey (encrypt)",
+	"created": "2025-11-14",
+	"expires": "2027-10-18",
+	"file": "/pgp.asc"
+}

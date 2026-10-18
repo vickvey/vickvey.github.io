@@ -2,11 +2,13 @@
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import profile from "../data/profile.json";
+import socials from "../data/socials.json";
 import profilePhoto from "../assets/images/profile.jpg";
 
 // The first experience entry is the current role, so it can't drift from the Experience section
 const [current] = (await getCollection("experience")).sort((a, b) => a.data.order - b.data.order);
 const highlights = [`${current.data.title} @ ${current.data.organization}`, ...profile.heroHighlights];
+const github = socials.find((s) => s.icon === "github");
 ---
 
 <section id="hero" class="min-h-screen -mt-16 pt-16 flex items-center bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-950">
@@ -46,13 +48,21 @@ const highlights = [`${current.data.title} @ ${current.data.organization}`, ...p
         >
           View CV
         </button>
+        {github && (
+          <a
+            href={github.url}
+            target="_blank"
+            rel="noopener"
+            class="px-6 py-3 border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+          >
+            GitHub
+          </a>
+        )}
         <a
-          href={profile.github}
-          target="_blank"
-          rel="noopener"
+          href="/pgp/"
           class="px-6 py-3 border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
         >
-          GitHub
+          PGP Key
         </a>
       </div>
     </div>

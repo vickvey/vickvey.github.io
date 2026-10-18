@@ -1,0 +1,6 @@
+[
+	{ "label": "GitHub", "icon": "github", "url": "https://github.com/vickvey" },
+	{ "label": "LinkedIn", "icon": "linkedin", "url": "https://www.linkedin.com/in/vickvey" },
+	{ "label": "X", "icon": "x", "url": "https://x.com/vickvey" },
+	{ "label": "Google Scholar", "icon": "scholar", "url": "https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" }
+]

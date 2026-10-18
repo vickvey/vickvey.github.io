@@ -1,13 +1,23 @@
 ---
 import profile from "../data/profile.json";
+import socials from "../data/socials.json";
+import SocialIcon from "./SocialIcon.astro";
+import { encodeEmail } from "../lib/email";
 ---
 
 <footer class="bg-gray-800 dark:bg-gray-950 text-white py-6">
   <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
     <p>&copy; {new Date().getFullYear()} {profile.name}. All rights reserved.</p>
-    <nav class="flex gap-5" aria-label="Elsewhere">
-      <a href={profile.github} target="_blank" rel="noopener" class="hover:underline">GitHub</a>
-      <a href={`mailto:${profile.email}`} class="hover:underline">Email</a>
+    <nav class="flex flex-wrap items-center justify-center gap-5" aria-label="Elsewhere">
+      {
+        socials.map((s) => (
+          <a href={s.url} target="_blank" rel="noopener" aria-label={s.label} title={s.label} class="opacity-80 hover:opacity-100 transition">
+            <SocialIcon icon={s.icon} label={s.label} class="w-4 h-4" />
+          </a>
+        ))
+      }
+      <a href="#" data-email={encodeEmail(profile.email)} class="hover:underline">Email</a>
+      <a href="/pgp/" class="hover:underline">PGP Key</a>
       <a href="/rss.xml" class="hover:underline">RSS</a>
     </nav>
   </div>
