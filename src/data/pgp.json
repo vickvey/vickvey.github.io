@@ -1,7 +1,8 @@
 {
-	"fingerprint": "B59D5C59A43EAF50AFDCBEA1D2A1891842EF9407",
+	"fingerprint": "1E7B74F065CD36C035D4A786CFB14632B765CEEB",
 	"algorithm": "Ed25519 (sign, certify) · Curve25519 subkey (encrypt)",
-	"created": "2025-11-14",
-	"expires": "2027-10-18",
-	"file": "/pgp.asc"
+	"created": "2026-10-19",
+	"expires": "2028-10-18",
+	"file": "/pgp.asc",
+	"keyserver": "https://keys.openpgp.org/search?q=vivek.indie.dev@gmail.com"
 }

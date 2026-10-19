@@ -75,6 +75,11 @@ const shortId = pgp.fingerprint.slice(-16);
       </button>
     </div>
 
+    <p class="text-sm text-gray-600 dark:text-gray-400 mb-10">
+      Also available on
+      <a href={pgp.keyserver} class="underline hover:no-underline" rel="noopener">keys.openpgp.org</a>.
+    </p>
+
     <h2 class="text-2xl font-semibold mb-3">Import</h2>
     <pre
       class="font-mono text-sm bg-gray-100 dark:bg-gray-900 rounded-lg p-4 mb-10 overflow-x-auto">curl -s https://vickvey.github.io{pgp.file} | gpg --import</pre>
