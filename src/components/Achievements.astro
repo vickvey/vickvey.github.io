@@ -4,11 +4,11 @@ import achievements from "../data/achievements.json";
 import { inline } from "../lib/inline";
 ---
 
-<Section id="achievements" title="Achievements" alt>
+<Section id="achievements" title="Achievements">
   <div class="grid md:grid-cols-2 gap-6">
     {
       achievements.map((a) => (
-        <div class="p-6 bg-paper dark:bg-gray-900 rounded-xl shadow-sm hover:shadow-md transition">
+        <div class="p-6 bg-paper dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition">
           <h3 class="font-semibold text-blue-600 dark:text-blue-400 mb-2">{a.title}</h3>
           <p class="text-gray-700 dark:text-gray-300 leading-relaxed" set:html={inline(a.text)} />
         </div>

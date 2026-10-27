@@ -8,5 +8,9 @@
 		"Working on satellite & geospatial data analysis for applications in agriculture",
 		"Focus: ML + Optimization for decision-making under uncertainty"
 	],
+	"motto": {
+		"sanskrit": "स्वाध्यायः परमो धर्मः",
+		"meaning": "Self-study (and reflection) is the highest duty"
+	},
 	"heroTags": ["Data Science", "Applied ML", "Optimization", "Time Series", "Decision Systems"]
 }

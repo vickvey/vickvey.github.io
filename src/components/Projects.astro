@@ -6,7 +6,7 @@ import ProjectCard from "./ProjectCard.astro";
 const projects = (await getCollection("projects")).sort((a, b) => a.data.order - b.data.order);
 ---
 
-<Section id="projects" title="Projects">
+<Section id="projects" title="Projects" alt>
   <div class="grid md:grid-cols-2 gap-8">
     {projects.map((p) => <ProjectCard project={p.data} />)}
   </div>

@@ -3,10 +3,13 @@
 
 /* Class-based dark mode: <html class="dark"> */
 @custom-variant dark (&:where(.dark, .dark *));
+/* Collapsed icon-only sidebar: <html class="sidebar-collapsed"> */
+@custom-variant sidebar-collapsed (&:where(.sidebar-collapsed, .sidebar-collapsed *));
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Source Serif 4", ui-serif, Georgia, serif;
+  --font-devanagari: "Noto Serif Devanagari", "Source Serif 4", ui-serif, serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 
   /* One neutral scale serves both themes (class names stay gray-*).
@@ -25,12 +28,6 @@
   --color-gray-800: #1f262e;
   --color-gray-900: #151a20;
   --color-gray-950: #0d1014;
-
-  /* Larger type: small text was too small to read comfortably */
-  --text-xs: 0.8125rem;
-  --text-sm: 0.9375rem;
-  --text-base: 1.0625rem;
-  --text-lg: 1.1875rem;
 
   --leading-relaxed: 1.75;
   --leading-loose: 1.9;
@@ -79,12 +76,6 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-@media (width >= 64rem) {
-  body {
-    font-size: 1.125rem;
-  }
 }
 
 /* Visible keyboard focus everywhere, without showing on mouse clicks */
@@ -137,7 +128,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Blog reading experience: serif body for long-form text, sans headings, mono code */
 .prose {
   font-family: var(--font-serif);
-  font-size: 1.1875rem;
+  font-size: 1rem;
   line-height: 1.8;
   font-optical-sizing: auto;
   text-rendering: optimizeLegibility;
@@ -145,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (width >= 48rem) {
   .prose {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 }
 

@@ -1,10 +1,10 @@
 [
-	{ "href": "/#hero", "label": "Home" },
-	{ "href": "/#about", "label": "About" },
-	{ "href": "/#experience", "label": "Experience" },
-	{ "href": "/#projects", "label": "Projects" },
-	{ "href": "/#achievements", "label": "Achievements" },
-	{ "href": "/#skills", "label": "Skills" },
-	{ "href": "/#education", "label": "Education" },
-	{ "href": "/blog/", "label": "Blog" }
+	{ "href": "/#hero", "label": "Home", "icon": "home" },
+	{ "href": "/#about", "label": "About", "icon": "user" },
+	{ "href": "/#experience", "label": "Experience", "icon": "briefcase" },
+	{ "href": "/#projects", "label": "Projects", "icon": "flask" },
+	{ "href": "/#achievements", "label": "Achievements", "icon": "trophy" },
+	{ "href": "/#skills", "label": "Skills", "icon": "wrench" },
+	{ "href": "/#education", "label": "Education", "icon": "graduation-cap" },
+	{ "href": "/blog/", "label": "Blog", "icon": "book-open" }
 ]

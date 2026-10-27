@@ -12,6 +12,13 @@ const github = socials.find((s) => s.icon === "github");
 ---
 
 <section id="hero" class="min-h-screen -mt-16 pt-16 xl:mt-0 xl:pt-0 flex items-center bg-gradient-to-b from-paper to-gray-50 dark:from-gray-900 dark:to-gray-950">
+  <div class="w-full">
+  <figure class="max-w-5xl mx-auto px-6 mb-6 text-center">
+    <p lang="sa" class="font-[family-name:var(--font-devanagari)] text-base text-gray-800 dark:text-gray-200">
+      {profile.motto.sanskrit}
+    </p>
+    <figcaption class="mt-1 text-sm text-gray-600 dark:text-gray-400 italic">{profile.motto.meaning}</figcaption>
+  </figure>
   <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 px-6 items-center">
     <div class="order-2 lg:order-1">
       <p class="text-sm text-blue-600 dark:text-blue-400 font-medium tracking-wide mb-3">{profile.tagline}</p>
@@ -79,5 +86,6 @@ const github = socials.find((s) => s.icon === "github");
         />
       </div>
     </div>
+  </div>
   </div>
 </section>
